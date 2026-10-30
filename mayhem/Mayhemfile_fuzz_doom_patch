@@ -1,0 +1,9 @@
+project: savantenvs/srb2
+target: fuzz_doom_patch
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_doom_patch/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_doom_patch
+    libfuzzer: true
+    timeout: 5
